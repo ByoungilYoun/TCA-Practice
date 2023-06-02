@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B9EB8C1E2A29AF50001532DF /* TCA_CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB8C1D2A29AF50001532DF /* TCA_CounterApp.swift */; };
-		B9EB8C202A29AF50001532DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB8C1F2A29AF50001532DF /* ContentView.swift */; };
 		B9EB8C222A29AF51001532DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9EB8C212A29AF51001532DF /* Assets.xcassets */; };
 		B9EB8C252A29AF51001532DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9EB8C242A29AF51001532DF /* Preview Assets.xcassets */; };
 		B9EB8C2F2A29AF51001532DF /* TCA_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB8C2E2A29AF51001532DF /* TCA_CounterTests.swift */; };
 		B9EB8C392A29AF51001532DF /* TCA_CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB8C382A29AF51001532DF /* TCA_CounterUITests.swift */; };
 		B9EB8C3B2A29AF51001532DF /* TCA_CounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB8C3A2A29AF51001532DF /* TCA_CounterUITestsLaunchTests.swift */; };
+		B9EB8C4C2A29B0D2001532DF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B9EB8C4B2A29B0D2001532DF /* ComposableArchitecture */; };
+		B9EB8C4E2A29B101001532DF /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB8C4D2A29B101001532DF /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		B9EB8C1A2A29AF50001532DF /* TCA-Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA-Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EB8C1D2A29AF50001532DF /* TCA_CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_CounterApp.swift; sourceTree = "<group>"; };
-		B9EB8C1F2A29AF50001532DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9EB8C212A29AF51001532DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9EB8C242A29AF51001532DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9EB8C2A2A29AF51001532DF /* TCA-CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA-CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +44,7 @@
 		B9EB8C342A29AF51001532DF /* TCA-CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA-CounterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EB8C382A29AF51001532DF /* TCA_CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_CounterUITests.swift; sourceTree = "<group>"; };
 		B9EB8C3A2A29AF51001532DF /* TCA_CounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_CounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B9EB8C4D2A29B101001532DF /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EB8C4C2A29B0D2001532DF /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B9EB8C1D2A29AF50001532DF /* TCA_CounterApp.swift */,
-				B9EB8C1F2A29AF50001532DF /* ContentView.swift */,
+				B9EB8C4D2A29B101001532DF /* CounterView.swift */,
 				B9EB8C212A29AF51001532DF /* Assets.xcassets */,
 				B9EB8C232A29AF51001532DF /* Preview Content */,
 			);
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = "TCA-Counter";
+			packageProductDependencies = (
+				B9EB8C4B2A29B0D2001532DF /* ComposableArchitecture */,
+			);
 			productName = "TCA-Counter";
 			productReference = B9EB8C1A2A29AF50001532DF /* TCA-Counter.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = B9EB8C112A29AF50001532DF;
+			packageReferences = (
+				B9EB8C4A2A29B0D2001532DF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = B9EB8C1B2A29AF50001532DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EB8C202A29AF50001532DF /* ContentView.swift in Sources */,
 				B9EB8C1E2A29AF50001532DF /* TCA_CounterApp.swift in Sources */,
+				B9EB8C4E2A29B101001532DF /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +599,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9EB8C4A2A29B0D2001532DF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9EB8C4B2A29B0D2001532DF /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9EB8C4A2A29B0D2001532DF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B9EB8C122A29AF50001532DF /* Project object */;
 }
